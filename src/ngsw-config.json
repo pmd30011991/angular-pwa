@@ -10,7 +10,7 @@
           "/runtime.*.js",
           "/polyfills.*.js",
           "/main.*.js",
-          "/style.*.css"
+          "/styles.*.css"
         ]
       }
     }, {
