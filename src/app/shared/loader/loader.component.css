@@ -1,0 +1,63 @@
+.image-icon {
+    color: white;
+    height: 4em;
+    margin-left: 2em;
+  }
+  
+  img {
+    vertical-align: middle;
+  }
+  
+  @-webkit-keyframes rotate {
+    0% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  @keyframes rotate {
+    0% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  @-webkit-keyframes wink {
+    50% {
+      opacity: 0;
+    }
+  }
+  @keyframes wink {
+    50% {
+      opacity: 0;
+    }
+  }
+  .spinner {
+    width: 7em;
+    margin: 3em auto;
+    position: relative;
+  }
+  .spinner:before {
+    content: "";
+    display: block;
+    width: 7em;
+    height: 1em;
+    margin: 20em auto;
+    padding: 3em 0;
+    border-radius: 50%;
+    border: 2px solid #2a3a3a;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    -webkit-animation: rotate 1s ease infinite;
+            animation: rotate 1s ease infinite;
+  }
+  .spinner:after {
+    content: "Loading";
+    position: absolute;
+    top: 0;
+    color: #2a3a3a;
+    font: .9em sans-serif;
+    width: 8em;
+    line-height: 8em;
+    text-align: center;
+    -webkit-animation: wink 1.4s ease infinite;
+            animation: wink 1.4s ease infinite;
+  }

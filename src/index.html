@@ -1,14 +1,28 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>AngularPWA</title>
   <base href="/">
-
+  <meta name="theme-color" content="#673ab7">
+  <meta name="description" content="Test Angular PWA">
+  <link rel="apple-touch-icon" sizes="192x192" href="assets/images/icons/icon-192x192.png">
+  <link rel="manifest" href="manifest.json">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
+
 <body>
-  <app-root></app-root>
+  <app-root>
+    <nav style="background-color: #673ab7; height: 56px; width: 100%"></nav>
+    <noscript>
+      <h3 style="color: #673ab7; font-family: Helvetica; margin: 2rem;">
+        Sorry, but app is not available without javascript
+      </h3>
+    </noscript>
+    <app-loader></app-loader>
+  </app-root>
 </body>
+
 </html>

@@ -3,8 +3,11 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
+    "ngsw-config": "node_modules/.bin/ngsw-config dist src/ngsw-config.json",
+    "ngsw-copy": "node_modules/.bin/copyfiles -f node_modules/@angular/service-worker/ngsw-worker.js dist",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build  && npm run ngsw-config && npm run ngsw-copy",
+    "buildProd": "ng build --aot --prod && npm run ngsw-config && npm run ngsw-copy",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -12,15 +15,19 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "^6.1.0",
+    "@angular/cdk": "^6.4.6",
     "@angular/common": "^6.1.0",
     "@angular/compiler": "^6.1.0",
     "@angular/core": "^6.1.0",
     "@angular/forms": "^6.1.0",
     "@angular/http": "^6.1.0",
+    "@angular/material": "^6.4.6",
     "@angular/platform-browser": "^6.1.0",
     "@angular/platform-browser-dynamic": "^6.1.0",
     "@angular/router": "^6.1.0",
+    "@angular/service-worker": "^6.1.6",
     "core-js": "^2.5.4",
+    "normalize.css": "^8.0.0",
     "rxjs": "^6.0.0",
     "zone.js": "~0.8.26"
   },
